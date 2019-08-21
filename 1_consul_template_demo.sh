@@ -14,7 +14,6 @@ consul-template -vault-renew-token=false -consul-addr=http://127.0.0.1:8500 \
 p
 
 green "Load round 1 of data. After doing so, reload the web page"
-
 cat << EOF
 consul kv put demo/consul-template/questions '{"question1" : "What is your name",
 "answer1" : "Sir Lancelot of Camelot",
@@ -32,6 +31,8 @@ consul kv put demo/consul-template/questions '{"question1" : "What is your name"
 "question3": "What is your favourite color",
 "answer3":  "Blue",
 "bridgekeeper": "STOP! Who would cross the Bridge of Death must answer me these questions three, ere the other side he see."}'
+
+cyan "Reload http://localhost:8000/consul-template/"
 p
 
 green "Load round 2 of data. After doing so, reload the web page"
@@ -52,6 +53,7 @@ consul kv put demo/consul-template/questions '{"question1" : "What is your name"
 "question3": "What...is the capital of Assyria",
 "answer3":  "I dont know that! AAAAAAAAAH!",
 "bridgekeeper": "STOP! Whoever approacheth the Bridge of Death must answer me these questions three, ere the other side he see."}'
+cyan "Reload http://localhost:8000/consul-template/"
 p
 
 green "Load round 3 of data. After doing so, reload the web page"
@@ -72,6 +74,7 @@ consul kv put demo/consul-template/questions '{"question1" : "What is your name"
 "question3": "What is your favourite color",
 "answer3":  "Blue.  No Yelloooooooooooaaaaaaaaahhhhhh!",
 "bridgekeeper": "STOP!"}'
+cyan "Reload http://localhost:8000/consul-template/"
 p
 
 green "Load round 4 of data. After doing so, reload the web page"
@@ -92,5 +95,6 @@ consul kv put demo/consul-template/questions '{"question1" : "What is your name"
 "question3": "What is the airspeed velocity of an unladen swallow?",
 "answer3":  "What do you mean?  An African or European swallow",
 "bridgekeeper": "Hee hee hee. STOP!"}'
+cyan "Reload http://localhost:8000/consul-template/"
 p
 
