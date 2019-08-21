@@ -11,6 +11,7 @@ EOF
 consul-template -vault-renew-token=false -consul-addr=http://127.0.0.1:8500 \
   -template="./consul-template/holy_grail.json.tpl:static/holy_grail.json" \
   -template="./consul-template/holy_grail.html.tpl:static/holy_grail.html" & 
+CT_PID=$!
 p
 
 green "Load round 1 of data. After doing so, reload the web page"
@@ -98,3 +99,5 @@ consul kv put demo/consul-template/questions '{"question1" : "What is your name"
 cyan "Reload http://localhost:8000/consul-template/"
 p
 
+yellow "Killing Consul Template"
+kill -9 $CT_PID
