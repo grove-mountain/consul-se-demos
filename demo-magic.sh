@@ -51,6 +51,11 @@ yellow () {
   echo -e "${YELLOW}$@${COLOR_RESET}"
 }
 
+cyan () {
+  echo -e "${CYAN}$@${COLOR_RESET}"
+}
+
+
 ##
 # prints the script usage
 ##
