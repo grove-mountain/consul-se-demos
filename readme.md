@@ -22,9 +22,13 @@ Run Docker Compose
 docker-compose up
 ```
 
+## Run the demo scripts
+
 All scripts use a tool called demo-magic which allows you to step through each command that's being run and pause where necessary.   
 
-## Consul Template Demo
+When running the script, follow the directions in the script at each step and then hit <return> to move to the next one.   
+
+### Consul Template Demo
 
 
 Run the following script:
@@ -32,7 +36,7 @@ Run the following script:
 1_consul_template_demo.sh
 ```
 
-## Consul Layer 7 Demo
+### Consul Layer 7 Demo
 Run the following script:
 ```
 2_l7_demo.sh
