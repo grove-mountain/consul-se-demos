@@ -2,6 +2,8 @@
 
 The intent for this is to create a single dashboard for Consul Demos.   
 
+Content inspired and largely copied from https://github.com/hashicorp/consul-demo-traffic-splitting
+
 ## Prerequisites
 
 - Docker
